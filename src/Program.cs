@@ -1,5 +1,4 @@
-﻿using System.Linq.Expressions;
-
+﻿
 Menu();
 
 static void Menu()
@@ -28,32 +27,38 @@ static void Menu()
             "digite o valor que deseja converter.");
             Thread.Sleep(1500);
             Menu();
-            break;
+        break;
     }
 }
 
 static double Kilometro(double valor)
 {
+    Console.Clear();
     return (valor/1000);
 }
 static double Hectometro(double valor)
 {
+    Console.Clear();
     return (valor / 100);
 }
 static double Decametro(double valor)
 {
+    Console.Clear();
     return (valor / 10);
 }
 static double Decimetro(double valor)
 {
+    Console.Clear();
     return (valor * 10);
 }
 static double Centimetro(double valor)
 {
+    Console.Clear();
     return (valor * 100);
 }
 static double Milimetro(double valor)
 {
+    Console.Clear();
     return (valor * 1000);
 }
 
