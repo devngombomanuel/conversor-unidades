@@ -24,3 +24,10 @@ static void Menu()
         case 7: ; break;
     }
 }
+
+static double Kilometro(double valor)
+{
+    return (valor/1000);
+}
+
+
