@@ -12,17 +12,15 @@ static void Menu()
         "\n0 - Sair");
     Console.Write("Digite a opção correspondente: ");
     int opcao = Convert.ToInt32(Console.ReadLine());
-    Console.BackgroundColor= ConsoleColor.Blue;
-    Console.ForegroundColor= ConsoleColor.White;
     switch (opcao)
     {
         case 0: System.Environment.Exit(0); break;
-        case 1: Console.WriteLine($"{valor} m corresponde a  {Kilometro(valor)} Km"); break;
-        case 2: Console.WriteLine($"{valor} m corresponde a  {Hectometro(valor)} hm"); break;
-        case 3: Console.WriteLine($"{valor} m corresponde a  {Decametro(valor)} dam"); break;
-        case 4: Console.WriteLine($"{valor} m corresponde a  {Decimetro(valor)} dm"); break;
-        case 5: Console.WriteLine($"{valor} m corresponde a  {Centimetro(valor)} cm"); break;
-        case 6: Console.WriteLine($"{valor} m corresponde a  {Milimetro(valor)} mm"); break;
+        case 1: Console.WriteLine($"{valor} m corresponde a {Kilometro(valor)} Km"); break;
+        case 2: Console.WriteLine($"{valor} m corresponde a {Hectometro(valor)} hm"); break;
+        case 3: Console.WriteLine($"{valor} m corresponde a {Decametro(valor)} dam"); break;
+        case 4: Console.WriteLine($"{valor} m corresponde a {Decimetro(valor)} dm"); break;
+        case 5: Console.WriteLine($"{valor} m corresponde a {Centimetro(valor)} cm"); break;
+        case 6: Console.WriteLine($"{valor} m corresponde a {Milimetro(valor)} mm"); break;
         default: Console.WriteLine("Escolha as opções corretamente, " +
             "digite o valor que deseja converter.");
             Thread.Sleep(1500);
@@ -64,5 +62,4 @@ static double Milimetro(double valor)
 
 
 
-Console.ResetColor();
 
