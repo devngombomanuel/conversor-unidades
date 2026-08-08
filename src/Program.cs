@@ -20,10 +20,15 @@ static void Menu()
         case 0: System.Environment.Exit(0); break;
         case 1: Console.WriteLine($"{valor} m corresponde a  {Kilometro(valor)} Km"); break;
         case 2: Console.WriteLine($"{valor} m corresponde a  {Hectometro(valor)} hm"); break;
-        case 3: Console.WriteLine($"{valor} m corresponde a  {Dacametro(valor)} dam"); break;
+        case 3: Console.WriteLine($"{valor} m corresponde a  {Decametro(valor)} dam"); break;
         case 4: Console.WriteLine($"{valor} m corresponde a  {Decimetro(valor)} dm"); break;
         case 5: Console.WriteLine($"{valor} m corresponde a  {Centimetro(valor)} cm"); break;
         case 6: Console.WriteLine($"{valor} m corresponde a  {Milimetro(valor)} mm"); break;
+        default: Console.WriteLine("Escolha as opções corretamente, " +
+            "digite o valor que deseja converter.");
+            Thread.Sleep(1500);
+            Menu();
+            break;
     }
 }
 
@@ -35,7 +40,7 @@ static double Hectometro(double valor)
 {
     return (valor / 100);
 }
-static double Dacametro(double valor)
+static double Decametro(double valor)
 {
     return (valor / 10);
 }
