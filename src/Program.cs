@@ -23,6 +23,7 @@ static void Menu()
         case 3: Console.WriteLine($"{valor} m corresponde a  {Dacametro(valor)} dam"); break;
         case 4: Console.WriteLine($"{valor} m corresponde a  {Decimetro(valor)} dm"); break;
         case 5: Console.WriteLine($"{valor} m corresponde a  {Centimetro(valor)} cm"); break;
+        case 6: Console.WriteLine($"{valor} m corresponde a  {Milimetro(valor)} mm"); break;
     }
 }
 
@@ -45,6 +46,10 @@ static double Decimetro(double valor)
 static double Centimetro(double valor)
 {
     return (valor * 100);
+}
+static double Milimetro(double valor)
+{
+    return (valor * 1000);
 }
 
 
