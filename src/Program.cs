@@ -31,4 +31,5 @@ static double Hectometro(double valor)
     return (valor / 100);
 }
 
+Console.ResetColor();
 
