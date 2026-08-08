@@ -29,5 +29,9 @@ static double Kilometro(double valor)
 {
     return (valor/1000);
 }
+static double Hectometro(double valor)
+{
+    return (valor / 100);
+}
 
 
