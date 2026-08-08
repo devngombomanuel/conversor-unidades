@@ -4,13 +4,15 @@ Menu();
 
 static void Menu()
 {
-    Console.WriteLine("****Escolha a unidade********");
-    Console.WriteLine("1- Km \n2- hm \n3- dam \n4- m \n5- dm \n6- cm \n7- mm \n0 - Sair");
-
+    Console.WriteLine("****Bem-vindo****");
+    Console.Write("Digite o valor [metro]: ");
+    double valor = Convert.ToDouble(Console.ReadLine());
+    Console.WriteLine("****Escolha a unidade****" +
+        "\n1- Km \n2- hm \n3- dam " +
+        "\n4- m \n5- dm \n6- cm " +
+        "\n7- mm \n0 - Sair");
     Console.Write("Digite a opção correspondente: ");
     int opcao = Convert.ToInt32(Console.ReadLine());
-    Console.Write("Digite o valor: ");
-    double valor = Convert.ToDouble(Console.ReadLine());
 
     switch (opcao)
     {
