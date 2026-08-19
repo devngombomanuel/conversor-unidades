@@ -1,65 +1,14 @@
 ﻿
-Menu();
+readonly struct ConversorUnidades
+{
+    public double valorMetro{ get; }
 
-static void Menu()
-{
-    Console.WriteLine("****Bem-vindo****");
-    Console.Write("Digite o valor [metro]: ");
-    double valor = Convert.ToDouble(Console.ReadLine());
-    Console.WriteLine("\n\n****Escolha a unidade****" +
-        "\n1- Km \n2- hm \n3- dam " +
-        "\n4- dm \n5- cm \n6- mm " +
-        "\n0 - Sair");
-    Console.Write("Digite a opção correspondente: ");
-    int opcao = Convert.ToInt32(Console.ReadLine());
-    switch (opcao)
-    {
-        case 0: System.Environment.Exit(0); break;
-        case 1: Console.WriteLine($"{valor} m corresponde a {Kilometro(valor)} Km"); break;
-        case 2: Console.WriteLine($"{valor} m corresponde a {Hectometro(valor)} hm"); break;
-        case 3: Console.WriteLine($"{valor} m corresponde a {Decametro(valor)} dam"); break;
-        case 4: Console.WriteLine($"{valor} m corresponde a {Decimetro(valor)} dm"); break;
-        case 5: Console.WriteLine($"{valor} m corresponde a {Centimetro(valor)} cm"); break;
-        case 6: Console.WriteLine($"{valor} m corresponde a {Milimetro(valor)} mm"); break;
-        default: Console.WriteLine("Escolha as opções corretamente, " +
-            "digite o valor que deseja converter.");
-            Thread.Sleep(1500);
-            Menu();
-        break;
-    }
-}
+    public ConversorUnidades(double valoremmetro) => valorMetro = valoremmetro;
+    public double  valorKilometro => valorKilometro / 1000D;
+    public double  valorHectometro => valorHectometro / 100D;
+    public double  valorDecametro => valorDecametro / 10D;
+    public double  valorDecimetro => valorDecimetro * 10D;
+    public double  valorCentimetro => valorCentimetro * 100D;
+    public double  valorMilimetro => valorMilimetro / 1000D;
 
-static double Kilometro(double valor)
-{
-    Console.Clear();
-    return (valor/1000);
 }
-static double Hectometro(double valor)
-{
-    Console.Clear();
-    return (valor / 100);
-}
-static double Decametro(double valor)
-{
-    Console.Clear();
-    return (valor / 10);
-}
-static double Decimetro(double valor)
-{
-    Console.Clear();
-    return (valor * 10);
-}
-static double Centimetro(double valor)
-{
-    Console.Clear();
-    return (valor * 100);
-}
-static double Milimetro(double valor)
-{
-    Console.Clear();
-    return (valor * 1000);
-}
-
-
-
-
